@@ -21,9 +21,24 @@ request.onload = function() {
     console.log(data);  
     console.log(data.sys.country)
     location.innerHTML = data.sys.country+" / "+ data.name;
-    //icon.src =  data.weather[0].icon;
-    var src = document.getElementById("icon");
-    src.appendChild(img);
+    //wheater images
+    if(data.weather[0].description === "fog"){
+        icon.src = "images/cloudy.svg";
+        var src = document.getElementById(src);
+        src.appendChild(img);
+    }
+    else if(data.weather[0].description === "light rain"){
+        icon.src = "images/rainy-7.svg";
+        var src = document.getElementById(src);
+        src.appendChild(img);
+
+    }
+    else
+    icon.src = "images/cloudy.svg";
+        var src = document.getElementById(src);
+        src.appendChild(img);
+
+    
 }
 
 request.send(`https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`);

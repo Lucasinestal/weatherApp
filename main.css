@@ -3,4 +3,50 @@ body{
     padding:0;
     background-image: linear-gradient(to right, #ff4e50, #f9d423);
     color:white;
-};
+    font-family: 'Barlow', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:none;
+    margin:none;
+}
+#container{
+    width:100%;
+    align-items:center;
+}
+
+#location{
+    font-size: 15px;
+    margin-top: 5%;
+    text-align:center;
+}
+
+#temperature{
+    text-align:center;
+    font-size: 60px;
+    font-style: unset;
+    margin-top:50%;
+    margin-bottom:0;
+}
+.temperature-section{
+    width:100%;
+    text-align:center;
+}
+
+#icon{
+    width:70%;
+    margin:none;
+    padding:none;
+    
+    
+}
+
+#weather{
+    padding:none;
+    margin:none;
+    font-size: 18px;
+    text-transform: capitalize;
+    
+}
+
+

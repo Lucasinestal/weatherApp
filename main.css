@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background-image: linear-gradient(to right, #ff4e50, #f9d423);
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
     color:white;
     font-family: 'Barlow', sans-serif;
     display:flex;
@@ -15,17 +15,45 @@ body{
     align-items:center;
 }
 
+.location-section{
+    
+    margin-top:none;
+    background-color:white;
+    color: black;
+    padding: 0.1px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    text-transform:uppercase;
+    display:flex;
+    justify-content:flex-start;
+    text-align:center;
+}
+
+.location-section h3{
+    margin-left: 16%;
+}
+
+.location-section img{
+    margin-left:4%;
+    width:10%;
+    display:flex;
+    
+    
+    
+    
+}
+
 #location{
     font-size: 15px;
     margin-top: 5%;
     text-align:center;
 }
 
+
 #temperature{
     text-align:center;
     font-size: 60px;
     font-style: unset;
-    margin-top:50%;
+    margin-top:45%;
     margin-bottom:0;
 }
 .temperature-section{
@@ -38,7 +66,7 @@ body{
     margin:none;
     padding:none;
     color:white;
-    width: 50%;
+    width: 80%;
     
 }
 

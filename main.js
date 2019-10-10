@@ -26,32 +26,38 @@ request.onload = function() {
     let loc = data.timezone;
     console.log(loc)
     location.innerHTML = loc;
-    icon.src = data.weather[0].icon;
-        var src = document.getElementById(src);
-        src.appendChild(img);
-    //wheater images
-    /*
-    if(data.weather[0].description === "fog"){
-        icon.src = "images/cloudy.svg";
-        var src = document.getElementById(src);
+
+    if(data.currently.icon === "partly-cloudy-day"){
+        icon.src = "images/cloudy-day-3.svg"
+        let src = document.getElementById(src)
         src.appendChild(img);
     }
-    else if(data.weather[0].description === "light rain"){
-        icon.src = "images/rainy-7.svg";
-        var src = document.getElementById(src);
+    else if(data.currently.icon === "clear-day"){
+        icon.src = "images/day.svg"
+        let src = document.getElementById(src)
         src.appendChild(img);
-
     }
-    else
-    icon.src = "images/cloudy.svg";
-        var src = document.getElementById(src);
+    else if(data.currently.icon === "rain"){
+        icon.src = "images/rainy-7.svg"
+        let src = document.getElementById(src)
         src.appendChild(img);
+    }
+    else if(data.currently.icon === "sleet"){
+        icon.src = "images/snowy-2.svg"
+        let src = document.getElementById(src)
+        src.appendChild(img);
+    }
+    else if(data.currently.icon === "sleet"){
+        icon.src = "images/snowy-2.svg"
+        let src = document.getElementById(src)
+        src.appendChild(img);
+    } 
+    else if(data.currently.icon === "cloudy"){
+        icon.src = "images/cloudy.svg"
+        let src = document.getElementById(src)
+        src.appendChild(img);
+    } 
 
-   */ 
- 
 }
-
 request.send(`https://api.darksky.net/forecast/dc706de2c3db16cd623c690a61a8551c/${lat},${lon}`);
-  
-}
-
+} 

@@ -34,10 +34,11 @@ body{
 }
 
 #icon{
-    width:70%;
+    
     margin:none;
     padding:none;
-    
+    color:white;
+    width: 50%;
     
 }
 
@@ -46,6 +47,7 @@ body{
     margin:none;
     font-size: 18px;
     text-transform: capitalize;
+   
     
 }
 

@@ -1,32 +1,44 @@
+document.addEventListener("DOMContentLoaded", function(){
+    console.log("loaded")
 //getting userLocation
 navigator.geolocation.getCurrentPosition(getPosition);
 function getPosition(position){
    
     let lon = position.coords.longitude;
     let lat = position.coords.latitude;
-    console.log(lon,lat);
     let location = document.getElementById("location");
+
+
     
                         
  //getting Data
 let request = new XMLHttpRequest(); 
 request.open('GET', `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/dc706de2c3db16cd623c690a61a8551c/${lat},${lon}`, true)
 request.onload = function() {
-    
     let data = JSON.parse(this.responseText)
-    console.log(data);
     let temp = (Math.floor(data.currently.temperature))
     let temperature = document.getElementById("temperature");
     temperature.innerHTML = temp +"°F"
+    let celsius = ((temp - 32) * (5/9));
+    let c = Math.floor(celsius)
     let weatherDescription = data.currently.summary;
-    console.log(weatherDescription)
     document.getElementById("weather").innerHTML = weatherDescription;
-    console.log(data);  
-    console.log(data.timzone)
     let loc = data.timezone;
-    console.log(loc)
     location.innerHTML = loc;
+    console.log(data);
 
+//Changing Between Farenheit and Celsius
+    temperature.addEventListener("click", function(){
+        if(temperature.innerText === temp +"°F"){
+            temperature.innerText = c +"°C"
+        }
+        else if(temperature.innerText === c +"°C"){
+                temperature.innerText = temp +"°F"
+        }
+        else{temperature.innerText === temp +"°F"}
+    })
+   console.log(temperature.innerText);
+//Icons changing depending on Api description of weather.
     if(data.currently.icon === "partly-cloudy-day"){
         icon.src = "images/cloudy-day-3.svg"
         let src = document.getElementById(src)
@@ -57,7 +69,7 @@ request.onload = function() {
         let src = document.getElementById(src)
         src.appendChild(img);
     } 
-
 }
 request.send(`https://api.darksky.net/forecast/dc706de2c3db16cd623c690a61a8551c/${lat},${lon}`);
 } 
+})

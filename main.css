@@ -1,82 +1,113 @@
 body{
+    background-color:#343d46;
+}
+
+#container{
+    width:100%;
+    height:100%;
+    text-align:center;
     margin:0;
     padding:0;
-    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
     color:white;
-    font-family: 'Barlow', sans-serif;
     display:flex;
     flex-direction:column;
     align-items:center;
     padding:none;
     margin:none;
-}
-#container{
-    width:100%;
-    align-items:center;
-}
-
-.location-section{
-    
-    margin-top:none;
-    background-color:white;
-    color: black;
-    padding: 0.1px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    text-transform:uppercase;
-    display:flex;
-    justify-content:flex-start;
-    text-align:center;
+    font-family: 'Lato', sans-serif;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.location-section h3{
-    margin-left: 16%;
-}
-
-.location-section img{
-    margin-left:4%;
-    width:10%;
-    display:flex;
-    
-    
-    
-    
-}
 
 #location{
-    font-size: 15px;
-    margin-top: 5%;
+    width: 100%;
+    height: 20%;
     text-align:center;
+    text-transform:uppercase;
+    margin:0;
+    
 }
 
 
 #temperature{
+    padding:0;
     text-align:center;
-    font-size: 60px;
+    font-size: 70px;
     font-style: unset;
-    margin-top:45%;
-    margin-bottom:0;
+    color:white;
+    margin:0;
 }
 .temperature-section{
+    display:flex;
+    flex-direction:column-reverse;
     width:100%;
-    text-align:center;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top: 15vh;
+    
+    
+    
 }
 
 #icon{
-    
-    margin:none;
-    padding:none;
+    margin:auto;
+    padding:auto;
     color:white;
-    width: 80%;
+    width: 40%;
     
 }
 
 #weather{
-    padding:none;
-    margin:none;
+    padding:auto;
+    margin:auto;
     font-size: 18px;
     text-transform: capitalize;
-   
+    font-size: 20px;
     
 }
 
+
+#footerSection{
+    display:flex;
+    flex-direction:row-reverse;
+    /*background-color:#343d46;*/
+    width: 100%;
+    padding-top:55vh;
+    color:white;
+    text-align:center;
+   /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+    justify-content:flex-end;
+    align-items:flex-end;
+
+}
+
+
+@media only screen and (min-width: 550px) {
+    body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-color:	#343d46;
+    }
+    #container{
+        width: 550px;
+        height: 770px;
+        display:flex;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+       
+      
+    }
+    #footerSection{
+        
+        padding-top:45vh;
+    }
+    #temperature-section{
+       
+    }
+  }
+
+
+  
 
